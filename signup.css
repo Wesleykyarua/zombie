@@ -1,0 +1,134 @@
+/* General styling for the page */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: url('juja.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container for the form */
+.form-container {
+    background: linear-gradient(135deg, #000, #333);
+    border-radius: 10px;
+    padding: 40px;
+    max-width: 450px;
+    width: 100%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    backdrop-filter: blur(10px);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Heading style */
+.form-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #fff;
+    border-bottom: 2px solid #444;
+    padding-bottom: 10px;
+}
+
+/* Label style */
+.form-container label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #bbb;
+}
+
+/* Input fields style */
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="password"],
+.form-container input[type="number"] {
+    width: calc(100% - 24px);
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #111;
+    color: #fff;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-container input[type="text"]:focus,
+.form-container input[type="email"]:focus,
+.form-container input[type="password"]:focus,
+.form-container input[type="number"]:focus {
+    border-color: #fff;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+/* Submit button style */
+.form-container input[type="submit"] {
+    background: linear-gradient(135deg, #555, #777);
+    color: #fff;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    width: 100%;
+}
+
+.form-container input[type="submit"]:hover {
+    background: linear-gradient(135deg, #777, #999);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.6);
+}
+
+/* Error and success message styles */
+.error-message,
+.success-message {
+    margin-top: 10px;
+    padding: 10px;
+    border-left: 4px solid;
+    border-radius: 5px;
+    font-size: 0.875em;
+}
+
+.error-message {
+    color: #ff4d4d;
+    border-color: #ff4d4d;
+    background-color: rgba(255, 77, 77, 0.1);
+}
+
+.success-message {
+    color: #4caf50;
+    border-color: #4caf50;
+    background-color: rgba(76, 175, 80, 0.1);
+}
+
+/* Link style */
+.form-container p a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.form-container p a:hover {
+    border-color: #fff;
+}
